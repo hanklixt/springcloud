@@ -1,11 +1,11 @@
 server:
-  port: 6002
+  port: 6003
 
 spring:
     application:
-      name: tensquare-recruit
+      name: tensquare-qa
     datasource:
-     url: jdbc:mysql://127.0.0.1:3306/tensquare_recruit?serverTimezone=GMT%2B8&useUnicode=true&useSSL=false&characterEncoding=utf8
+     url: jdbc:mysql://127.0.0.1:3306/tensquare_qa?serverTimezone=GMT%2B8&useUnicode=true&useSSL=false&characterEncoding=utf8
      username: root
      password: root
      driver-class-name: com.mysql.cj.jdbc.Driver

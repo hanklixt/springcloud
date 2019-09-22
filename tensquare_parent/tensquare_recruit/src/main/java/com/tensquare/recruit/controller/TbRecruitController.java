@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.tensquare.recruit.entity.TbRecruit;
 import com.tensquare.recruit.service.ITbRecruitService;
 import entity.Result;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import reactor.core.publisher.Mono;
@@ -25,6 +26,7 @@ import java.util.Objects;
 @RestController
 @RequestMapping("/recruit")
 public class TbRecruitController extends  BaseController{
+    @Autowired
    private ITbRecruitService tbRecruitService;
 
    @PostMapping
@@ -100,7 +102,7 @@ public class TbRecruitController extends  BaseController{
         TbRecruit one = tbRecruitService.getOne(new LambdaQueryWrapper<TbRecruit>().orderByDesc(TbRecruit::getCreatetime).apply("limit 1"));
         return success(one);
     }
-    
+
 
 
 
