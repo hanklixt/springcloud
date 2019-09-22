@@ -23,6 +23,15 @@ public class HttpResultUtils {
         result.setFlag(false);
         return result;
     }
+
+    public Result error(Integer code,String message){
+        Result result=new Result();
+        result.setCode(code);
+        result.setMessage(message);
+        result.setFlag(false);
+        return result;
+    }
+
     public Result success(){
 
         Result result=new Result();

@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/tensquare.recruit/tb-recruit")
-public class TbRecruitController {
+public class TbRecruitController extends  BaseController{
+
 
 }
