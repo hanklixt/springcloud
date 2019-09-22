@@ -4,6 +4,7 @@ import com.tensquare.article.entity.TbArticle;
 import com.tensquare.article.mapper.TbArticleMapper;
 import com.tensquare.article.service.ITbArticleService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -17,4 +18,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class TbArticleServiceImpl extends ServiceImpl<TbArticleMapper, TbArticle> implements ITbArticleService {
 
+    @Autowired
+    private TbArticleMapper articleMapper;
+
+    @Override
+    public void addThumbup(String id) {
+     articleMapper.addThumbup(id);
+    }
 }

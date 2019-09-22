@@ -2,6 +2,8 @@ package com.tensquare.article.mapper;
 
 import com.tensquare.article.entity.TbArticle;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Update;
 
 /**
  * <p>
@@ -13,4 +15,6 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  */
 public interface TbArticleMapper extends BaseMapper<TbArticle> {
 
+    @Update("update tb_article set thumbup=thumbup+1 where id =#{id}")
+    public void addThumbup(@Param("id") String id);
 }
