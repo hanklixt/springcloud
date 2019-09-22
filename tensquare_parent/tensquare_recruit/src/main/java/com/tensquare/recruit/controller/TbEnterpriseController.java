@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 
 import reactor.core.publisher.Mono;
 import resultenum.ResultEnum;
+import util.IdWorker;
 
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
@@ -36,6 +37,9 @@ public class TbEnterpriseController extends BaseController{
 
     @Autowired
     private ITbEnterpriseService enterpriseService;
+
+    @Autowired
+    private IdWorker idWorker;
 
     @PostMapping("/add")
     public Mono<Result> addEnterprise(@RequestBody TbEnterprise enterprise){
