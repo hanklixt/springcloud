@@ -1,0 +1,21 @@
+server:
+  port: 6004
+
+spring:
+    application:
+      name: tensquare-article
+    datasource:
+     url: jdbc:mysql://127.0.0.1:3306/tensquare_article?serverTimezone=GMT%2B8&useUnicode=true&useSSL=false&characterEncoding=utf8
+     username: root
+     password: root
+     driver-class-name: com.mysql.cj.jdbc.Driver
+     type: com.zaxxer.hikari.HikariDataSource
+     hikari:
+      idle-timeout: 30000
+      minimum-idle: 5
+      maximum-pool-size: 10
+      auto-commit: true
+      max-lifetime: 18000000
+      connection-timeout: 30000
+      pool-name: DatebookHikariCP
+#      connection-test-query: SELECT  1
