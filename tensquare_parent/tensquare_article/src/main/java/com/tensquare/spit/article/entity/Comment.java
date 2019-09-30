@@ -1,4 +1,4 @@
-package com.tensquare.complaints.entity;
+package com.tensquare.spit.article.entity;
 
 import lombok.Data;
 import org.springframework.data.annotation.Id;
