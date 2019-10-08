@@ -1,8 +1,0 @@
-server:
-  port: 6009
-spring:
-  application:
-    name: tensquare-search
-  data:
-    elasticsearch:
-      cluster-nodes: localhost:9300
