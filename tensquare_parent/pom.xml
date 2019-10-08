@@ -15,7 +15,7 @@
         <module>tensquare_article</module>
         <module>tensquare_gathering</module>
         <module>tensquare_complaints</module>
-        <module>tensquare_search</module>
+        <module>tensquare_esearch</module>
     </modules>
     <packaging>pom</packaging>
     <parent>
